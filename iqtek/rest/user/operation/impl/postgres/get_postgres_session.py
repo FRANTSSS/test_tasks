@@ -11,6 +11,7 @@ __all__ = [
 ]
 
 
+# The function is needed to maintain a permanent session with the database
 def get_postgres_session() -> Optional[sessionmaker]:
     if os.environ["STORAGE_TYPE"].strip().lower() != "postgres":
         return None
